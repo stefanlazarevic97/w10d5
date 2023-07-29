@@ -7,7 +7,7 @@ function GalleryNavigation({galleries}) {
     return (
         <nav>
             <h1>Galleries</h1>
-            <NavLink to="/">Home</NavLink>
+            <NavLink exact to="/">Home</NavLink>
             <ul>
                 {galleries.map(gallery => (
                     <li>
