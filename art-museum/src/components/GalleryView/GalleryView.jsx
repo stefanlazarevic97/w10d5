@@ -1,6 +1,6 @@
-import { userParams, Redirect, Route } from "react-router-dom";
-import ArtImageTile from '../ArtImageTile';
-import ArtDescription from "../ArtDescription";
+import { useParams, Redirect, Route } from "react-router-dom";
+import ArtImageTile from "../ArtImageTile/ArtImageTile";
+import ArtDescription from "../ArtDescription/ArtDescription";
 import './GalleryView.css';
 
 function GalleryView({ galleries }) {
