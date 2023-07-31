@@ -5,7 +5,23 @@ import GalleryView from "./components/GalleryView/GalleryView";
 
 function App() {
     return (
-        <GalleryNavigation galleries={harvardArt.records} />
+        <div className="page-wrapper">
+            <GalleryNavigation galleries={harvardArt.records} />
+                <main>
+                <Switch>
+                    <Route exact path="/">
+                        <h2>Harvard Art Museum</h2>
+                        <p>Select a gallery in the navigation bar.</p>
+                    </Route>
+                    <Route path="/galleries/:galleryId">
+                        <GalleryView galleries={harvardArt.record}/>
+                    </Route>
+                    <Route>
+                        <h2>Page Not Found</h2>
+                    </Route>
+                </Switch>
+                </main>
+        </div>
     );
 }
 
